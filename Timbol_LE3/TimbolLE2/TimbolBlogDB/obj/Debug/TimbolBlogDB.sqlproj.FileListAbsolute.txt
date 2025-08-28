@@ -1,0 +1,10 @@
+G:\Repos\TimbolLE2\TimbolBlogDB\bin\Debug\TimbolBlogDB.dacpac
+G:\Repos\TimbolLE2\TimbolBlogDB\obj\Debug\TimbolBlogDB.sqlproj.AssemblyReference.cache
+G:\Repos\TimbolLE2\TimbolBlogDB\obj\Debug\TimbolBlogDB.dll
+G:\Repos\TimbolLE2\TimbolBlogDB\obj\Debug\TimbolBlogDB.pdb
+G:\Repos\TimbolLE2\TimbolBlogDB\bin\Debug\TimbolBlogDB.dll
+G:\Repos\TimbolLE2\TimbolBlogDB\bin\Debug\TimbolBlogDB.pdb
+G:\Repos\TimbolLE2\TimbolBlogDB\obj\Debug\Model.xml
+G:\Repos\TimbolLE2\TimbolBlogDB\obj\Debug\refactor.xml
+G:\Repos\TimbolLE2\TimbolBlogDB\obj\Debug\postdeploy.sql
+G:\Repos\TimbolLE2\TimbolBlogDB\obj\Debug\predeploy.sql
