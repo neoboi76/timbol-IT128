@@ -280,39 +280,21 @@ ALTER TABLE [dbo].[Posts]
 
 
 GO
-PRINT N'Creating Procedure [dbo].[spPosts_List]...';
+PRINT N'Creating Procedure [dbo].[spPosts_Details]...';
 
 
 GO
-CREATE PROCEDURE [dbo].[spPosts_List]
-
+CREATE PROCEDURE [dbo].[spPosts_Details]
+	@id int
 AS
 begin
 	set nocount on;
 
-	SELECT [p].[Id], [p].[Title], [p].[Body], [p].[DateCreated], [u].[Username], [u].[firstName], [u].[LastName]
+	Select p.[Id], p.[Title], p.[Body], p.[DateCreated], u.[UserName], u.[FirstName], u.[LastName]
 	FROM dbo.Posts p
 	INNER JOIN dbo.Users u
-	On p.UserId = u.Id
-end
-RETURN 0
-GO
-PRINT N'Creating Procedure [dbo].[spPosts_Insert]...';
-
-
-GO
-CREATE PROCEDURE [dbo].[spPosts_Insert]
-	@userID int,
-	@title nvarchar(150),
-	@body text,
-	@dateCreated datetime2
-AS
-begin
-	INSERT INTO dbo.POSTS
-	(UserId, Title, Body, DateCreated)
-	VALUES	
-	(@userId, @title, @body,
-@dateCreated)
+	ON p.UserId = u.Id
+	WHERE p.Id = @id
 end
 RETURN 0
 GO
@@ -357,21 +339,39 @@ end
 
 RETURN 0
 GO
-PRINT N'Creating Procedure [dbo].[spPosts_Details]...';
+PRINT N'Creating Procedure [dbo].[spPosts_Insert]...';
 
 
 GO
-CREATE PROCEDURE [dbo].[spPosts_Details]
-	@id int
+CREATE PROCEDURE [dbo].[spPosts_Insert]
+	@userId int,
+	@title nvarchar(150),
+	@body text,
+	@dateCreated datetime2
+AS
+begin
+	INSERT INTO dbo.POSTS
+	(UserId, Title, Body, DateCreated)
+	VALUES	
+	(@userId, @title, @body,
+@dateCreated)
+end
+RETURN 0
+GO
+PRINT N'Creating Procedure [dbo].[spPosts_List]...';
+
+
+GO
+CREATE PROCEDURE [dbo].[spPosts_List]
+
 AS
 begin
 	set nocount on;
 
-	Select p.[Id], p.[Title], p.[Body], p.[DateCreated], u.[UserName], u.[FirstName], u.[LastName]
+	SELECT [p].[Id], [p].[Title], [p].[Body], [p].[DateCreated], [u].[UserName], [u].[firstName], [u].[LastName]
 	FROM dbo.Posts p
 	INNER JOIN dbo.Users u
-	ON p.UserId = u.Id
-	WHERE p.Id = @id
+	On p.UserId = u.Id
 end
 RETURN 0
 GO

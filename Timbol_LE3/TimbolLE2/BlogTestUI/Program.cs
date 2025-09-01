@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +14,7 @@ namespace BlogTestUI
 {
     internal class Program
     {
+        private static bool control = false;
 
         private static SqlData GetConnection()
         {
@@ -32,14 +34,18 @@ namespace BlogTestUI
             SqlData db = GetConnection();
 
             Authenticate(db);
+    
+            if (control)
+            {
 
-            Register(db);
+                Register(db);
 
-            AddPost(db);
+                AddPost(db);
 
-            ListPosts(db);
+                ListPosts(db);
 
-            ShowPostDetails(db);
+                ShowPostDetails(db);
+            }
 
             Console.WriteLine("Press Enter to exit...");
             Console.ReadLine();
@@ -70,6 +76,7 @@ namespace BlogTestUI
             else
             {
                 Console.WriteLine($"Welcome, {user.UserName}");
+                control = true;
             }
         }
 

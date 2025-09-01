@@ -75,5 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="TimbolBlogDB.publish.xml" />
+    <None Include="TimbolBlogDB_1.publish.xml" />
+    <None Include="TimbolBlogDB_2.publish.xml" />
   </ItemGroup>
 </Project>

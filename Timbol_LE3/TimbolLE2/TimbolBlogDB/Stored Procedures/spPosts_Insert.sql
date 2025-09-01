@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[spPosts_Insert]
-	@userID int,
+	@userId int,
 	@title nvarchar(150),
 	@body text,
 	@dateCreated datetime2

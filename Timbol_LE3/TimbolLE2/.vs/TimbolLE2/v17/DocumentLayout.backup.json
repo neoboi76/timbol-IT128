@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "G:\\Repos\\TimbolLE2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BlogDB/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{44B5E367-0DEF-4866-BAD3-3BC73BB19F87}|BlogTestUI\\BlogTestUI.csproj|g:\\repos\\timbolle2\\blogtestui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44B5E367-0DEF-4866-BAD3-3BC73BB19F87}|BlogTestUI\\BlogTestUI.csproj|solutionrelative:blogtestui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BlogDB/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BlogDB/True/SqlTable/dbo.Posts.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
@@ -20,29 +20,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\Repos\\TimbolLE2\\BlogTestUI\\Program.cs",
               "RelativeDocumentMoniker": "BlogTestUI\\Program.cs",
-              "ToolTip": "G:\\Repos\\TimbolLE2\\BlogTestUI\\Program.cs*",
-              "RelativeToolTip": "BlogTestUI\\Program.cs*",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwCEAAAAMAAAAAAAAAA==",
+              "ToolTip": "G:\\Repos\\TimbolLE2\\BlogTestUI\\Program.cs",
+              "RelativeToolTip": "BlogTestUI\\Program.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T03:33:07.248Z",
+              "WhenOpened": "2025-09-01T14:30:09.757Z",
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "dbo.Users [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BlogDB/True/SqlTable/dbo.Users.sql",
               "ToolTip": "dbo.Users [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-08-28T03:32:47.941Z",
+              "WhenOpened": "2025-09-01T14:29:28.925Z",
               "EditorCaption": ""
             },
             {
@@ -52,12 +56,8 @@
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BlogDB/True/SqlTable/dbo.Posts.sql",
               "ToolTip": "dbo.Posts [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-08-28T03:32:44.223Z",
+              "WhenOpened": "2025-09-01T14:29:24.44Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
             }
           ]
         }
