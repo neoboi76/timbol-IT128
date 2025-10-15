@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant:wght@300&family=Roboto&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+
+body {
+    font-family: 'Cormorant', sans-serif;
+}
+
+@layer base {
+  /* Dark theme for Quill editor */
+  .dark-quill .ql-toolbar {
+    @apply bg-black border border-gray-700 text-white;
+  }
+
+  .dark-quill .ql-toolbar button svg {
+    filter: invert(1);
+  }
+
+  .dark-quill .ql-container {
+    @apply bg-black border border-gray-700 text-white;
+  }
+
+  .dark-quill .ql-editor {
+    @apply text-white;
+  }
+
+  .dark-quill .ql-editor::before {
+    @apply text-gray-500;
+  }
+
+  .dark-quill .ql-picker {
+    @apply text-white;
+  }
+
+  .dark-quill .ql-picker-options {
+    @apply bg-black border border-gray-700 text-white;
+  }
+}

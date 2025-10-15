@@ -1,0 +1,99 @@
+<div class="min-h-screen flex bg-white">
+    <div class="hidden lg:flex w-1/2 bg-black text-white flex-col justify-center items-center">
+        <div class="flex flex-col items-center px-8 text-center">
+            <p class="text-7xl text-gray-300">JOIN THE CATHEDRAL</p>
+            <p class="text-5xl text-gray-300">TAKE THE BLACK PILL</p>
+            <p class="text-5xl font-semibold bg-gradient-to-r from-green-400 via-green-500 to-green-300 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(34,197,94,0.7)]">
+                STEP OUT OF THE MATRIX
+            </p>
+        </div>
+    </div>
+
+    <div class="fixed lg:hidden top-0 left-0 w-full bg-black p-4 text-white">
+        <div class="flex flex-col items-center text-center">
+            <p class="text-5xl text-gray-300">JOIN THE CATHEDRAL</p>
+        </div> 
+    </div>
+
+    <div class="flex w-full lg:w-1/2 justify-center items-center bg-white py-10">
+        <div class="w-full max-w-lg px-8">
+            <h1 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Create your account</h1>
+
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate class="space-y-5">
+                <div>
+                    <label for="firstName" class="block text-sm font-medium text-gray-600 mb-1">First Name</label>
+                    <input
+                        id="firstName"
+                        type="text"
+                        placeholder="Enter your first name"
+                        formControlName="firstName"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#008F11] focus:outline-none"
+                    />
+                    <div *ngIf="submitted && f['firstName'].errors" class="text-red-500 text-sm mt-1">
+                        <span *ngIf="f['firstName'].errors['required']">First name is required.</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="lastName" class="block text-sm font-medium text-gray-600 mb-1">Last Name</label>
+                    <input
+                        id="lastName"
+                        type="text"
+                        placeholder="Enter your last name"
+                        formControlName="lastName"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#008F11] focus:outline-none"
+                    />
+                    <div *ngIf="submitted && f['lastName'].errors" class="text-red-500 text-sm mt-1">
+                        <span *ngIf="f['lastName'].errors['required']">Last name is required.</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-600 mb-1">Username</label>
+                    <input
+                        id="username"
+                        placeholder="Create your username"
+                        type="text"
+                        formControlName="username"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#008F11] focus:outline-none"
+                    />
+                    <div *ngIf="submitted && f['username'].errors" class="text-red-500 text-sm mt-1">
+                        <span *ngIf="f['username'].errors['required']">Username is required.</span>
+                        <span *ngIf="f['username'].errors['minlength']">Username must be at least 4 characters.</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-600 mb-1">Password</label>
+                    <input
+                        id="password"
+                        type="password"
+                        placeholder="Enter your password"
+                        formControlName="password"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#008F11] focus:outline-none"
+                    />
+                    <div *ngIf="submitted && f['password'].errors" class="text-red-500 text-sm mt-1">
+                        <span *ngIf="f['password'].errors['required']">Password is required.</span>
+                        <span *ngIf="f['password'].errors['minlength']">Must be at least 6 characters.</span>
+                    </div>
+                </div>
+
+                <div *ngIf="errorMessage" class="text-red-500 text-center text-sm">{{ errorMessage }}</div>
+                <div *ngIf="successMessage" class="text-green-600 text-center text-sm">{{ successMessage }}</div>
+
+                <button
+                    type="submit"
+                    [disabled]="registerForm.invalid"
+                    class="cursor-pointer w-full py-3 bg-[#008F11] text-white rounded-lg hover:bg-green-700 transition disabled:bg-gray-400 disabled:cursor-not-allowed font-semibold"
+                >
+                    Sign up now
+                </button>
+
+                <p class="text-sm text-center text-gray-500">
+                    Already have an account?
+                    <a routerLink="/login" class="text-[#008F11] hover:underline">Sign in</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<title>Create Post</title>
+
+<app-nav></app-nav>
+
+<div class="bg-black text-white min-h-screen p-6 mt-10 font-[Cormorant]">
+    <div class="max-w-3xl mx-auto bg-black p-6 rounded-lg shadow-lg border mt-10 border-white">
+        <input
+            type="text"
+            [(ngModel)]="addPost.title"
+            placeholder="Title"
+            class="w-full bg-black text-white border-b border-white p-2 mb-6 text-2xl font-semibold focus:outline-none focus:border-[#008F11] placeholder-white"
+        />
+
+        <quill-editor
+            [(ngModel)]="addPost.body"
+            [modules]="quillConfig"
+            theme="snow"
+            class="bg-black text-white w-full overflow-hidden
+                   [&_.ql-container]:max-w-full
+                   [&_.ql-container]:overflow-visible
+                   [&_.ql-editor]:whitespace-pre-wrap
+                   [&_.ql-editor]:break-words
+                   [&_.ql-editor]:overflow-wrap-break-word
+                   [&_.ql-editor]:overflow-x-hidden
+                   [&_.ql-editor]:text-wrap
+                   [&_.ql-code-block]:whitespace-pre-wrap
+                   [&_.ql-code-block]:break-words
+                   [&_.ql-code-block]:overflow-wrap-break-word
+                   min-h-[300px]"
+        ></quill-editor>
+
+        <button
+            (click)="submitPost()"
+            class="cursor-pointer mt-6 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+        >
+            Publish
+        </button>
+    </div>
+</div>
+
+<footer class="bg-white text-black text-center font-bold text-base md:text-lg py-6">
+    <div><em>THE CATHEDRAL</em> Copyright &copy; 2025 by DINO ALFRED TIMBOL.</div>
+</footer>

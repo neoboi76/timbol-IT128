@@ -1,0 +1,49 @@
+<title>Home</title>
+<div class="bg-black text-white text-center box-border m-0 p-0 font-[Cormorant]">
+    
+    <app-nav></app-nav>
+
+    <main class="relative mt-24 mb-16">
+        <section id="entry-1" class="flex flex-col justify-center items-center min-h-screen px-4">
+            <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-8xl tracking-widest">THE CATHEDRAL</h1>
+            <b class="text-3xl sm:text-3xl md:text-4xl mt-4">&lt;&gt;</b>
+            <p class="text-3xl sm:text-3xl md:text-5xl tracking-wide mt-4">BY DINO ALFRED TIMBOL</p>
+        </section>
+
+        <section id="about" class="flex flex-col justify-center items-center min-h-screen w-full text-white px-6 lg:px-25 text-justify">
+            <h2 class="text-3xl md:text-5xl tracking-[0.2em] text-center mb-10">ABOUT THE CATHEDRAL</h2>
+
+            <article class="prose xl:prose-xl  text-white prose-blockquote:text-white">
+                <p>
+                    THE CATHEDRAL is a relatively normal blog despite its pretentious and obviously stolen name: its goal is to supplement your thought processes.
+                    We've all seen The Matrix. We've probably heard of Mencius Moldbug. We know about red pills, blue pills, black pills—the whole repertoire of cultural metaphors.
+                    Many claim to sell them. You can go, for example, to any blog site, YouTube channel, Spotify podcast, or Substack page and peruse through their catalog for some
+                    <a href="https://en.wikipedia.org/wiki/Dark_Enlightenment" class="underline text-white">Nrx Dark Enlightenment stuff</a>.
+                    What you'll get are black pills soaked in brown #4.
+                </p>
+
+                <p>
+                    Since we provide pretty standard articles, <em>TC</em> is pretty much the anti-Moldbug.
+                    (As a broad generalization, <em>TC's</em> stance in any controversy will be the opposite of Moldbug's.
+                    Though, sometimes, there are often starking overlaps.)
+                    Take one of our red pills—heck, split one in half and wash it down with some blue stuff—and you'll how deep the rabbit hole goes.
+                </p>
+            </article>
+        </section>
+    
+        <section id="canon" class="flex flex-col justify-center items-center min-h-screen w-full px-6 lg:px-20 text-justify">      
+            <h2 class="text-3xl md:text-4xl tracking-[0.2em] text-center mb-15 mt-20">THE CANON</h2>
+            <h3 class="text-3xl font-bold md:text-4xl tracking-[0.2em] text-center mb-10">2025</h3>
+            
+            <a routerLink="/posts/{{ post.id }}" *ngFor="let post of posts" class="flex  [@media(max-width:370px)]:flex-col sm:flex-row space-x-5 justify-left sm:w-[75%] md:w-[70%] xl:w-[45%] w-[100%] mx-auto px-0 py-5 items-center text-justify border-b border-gray-300 pb-4 hover:bg-[#008F11] transition-colors duration-300 cursor-pointer">
+                <span class="text-[0.6rem] sm:text-base text-white">{{ post.dateCreated | date:'yyyy-MM-dd' }} </span>
+                <span class="text-[0.6rem] sm:text-base text-white">{{ post.title }}</span> 
+                <span class="text-[0.6rem] sm:text-base text-white"> by {{ post.firstName }} {{ post.lastName }}</span>
+            </a>
+        </section>
+    </main>
+
+    <footer class="bg-white text-black font-bold text-base md:text-lg py-6">
+        <div><em>THE CATHEDRAL</em> Copyright &copy; 2025 by DINO ALFRED TIMBOL.</div>
+    </footer>
+</div>

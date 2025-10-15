@@ -1,0 +1,6 @@
+G:\Repos\TimbolLE2\TimbolBlogDB\bin\Debug\TimbolBlogDB.dacpac
+G:\Repos\TimbolLE2\TimbolBlogDB\obj\Debug\TimbolBlogDB.sqlproj.AssemblyReference.cache
+G:\Repos\TimbolLE2\TimbolBlogDB\obj\Debug\TimbolBlogDB.dll
+G:\Repos\TimbolLE2\TimbolBlogDB\obj\Debug\TimbolBlogDB.pdb
+G:\Repos\TimbolLE2\TimbolBlogDB\bin\Debug\TimbolBlogDB.dll
+G:\Repos\TimbolLE2\TimbolBlogDB\bin\Debug\TimbolBlogDB.pdb
